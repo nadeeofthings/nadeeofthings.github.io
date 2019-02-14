@@ -160,7 +160,7 @@
 				<!-- Footer -->
 					<footer id="footer">
 						<section>
-							<form method="POST" action="https://formspree.io/z4nadeesh@gmail.com">
+							<form method="POST" id="contactform">
 								<div class="fields">
 									<div class="field">
 										<label for="name">Name</label>
@@ -169,6 +169,7 @@
 									<div class="field">
 										<label for="email">Email</label>
 										<input type="text" name="email" id="email" />
+										<input type="text" name="_gotcha" style="display:none" />
 									</div>
 									<div class="field">
 										<label for="message">Message</label>
@@ -176,7 +177,7 @@
 									</div>
 								</div>
 								<ul class="actions">
-									<li><input type="submit" value="Send Message" /></li>
+									<li><input id="sendMessage" value="Send Message" /></li>
 								</ul>
 							</form>
 						</section>

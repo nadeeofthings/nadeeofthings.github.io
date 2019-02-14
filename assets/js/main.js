@@ -13,6 +13,7 @@
 		$nav = $('#nav'),
 		$main = $('#main'),
 		$navPanelToggle, $navPanel, $navPanelInner;
+	var message = "";
 
 	// Breakpoints.
 		breakpoints({
@@ -24,6 +25,27 @@
 			xsmall:    ['361px',    '480px'    ],
 			xxsmall:   [null,       '360px'    ]
 		});
+
+
+
+/**
+
+
+
+*/
+   $("#sendMessage").on("click", function() {
+    message = $("#contactform").serialize();
+    $.ajax({
+        url: "//formspree.io/z4nadeesh@gmail.com", 
+        method: "POST",
+        data: {message: message},
+        dataType: "json"
+    });
+    alert('Thanks for the email, we\'ll be in touch promptly.');
+    return false;
+	});
+
+
 
 	/**
 	 * Applies parallax scrolling to an element's background image.
