@@ -1,0 +1,91 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>One machine to wash them all</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="../assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="../index.html" class="logo">NADEEOFTHINGS</a>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li><a href="../index.html">Home</a></li>
+							<li class="active"><a href="#">Article</a></li>
+						</ul>
+						<ul class="icons">
+							<li><a href="https://twitter.com/z4nadeesh" target="_blank" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a href="https://www.linkedin.com/in/nadeesha-sam/" target="_blank" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
+							<li><a href="mailto:nadeesh@gmx.com" target="_blank" class="icon fa-envelope-square"><span class="label">Email</span></a></li>
+							<li><a href="https://github.com/nadeeofthings" target="_blank" class="icon fa-github"><span class="label">GitHub</span></a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<section class="post">
+								<header class="major">
+									<span class="date">December 24, 2021</span>
+									<h1>One machine to wash them all</h1>
+									<p>Yes, This might be the biggest project I've undertaken so far.<br />
+										A fully automated ginger processing plant built from scratch.</p>
+								</header>
+								<span class="image main" ><img src="1/overview.png" alt=""/></span>
+								<p>I am so excited for this one. One of my mates approached me with the requirement for his dad's mid scale farm and I was intrigued. This is just a preliminary design that I did to figure out what components needs to be there and estimate a rough budget.
+									The purpose of the machine is to take raw ginger right after it's been pulled out from the ground and make that all clean and dry before sorting and packaging.
+								</p>
+								<p>Following flow chart shows the purpose of all modules in the machine and how the produce goes through each stage.</p>
+								<div class="image fit" style="margin-left: auto;margin-right: auto;"><img src="1/flow.png" alt=""/></div>
+								<p>I've been searching all over the internet for reference designs and this machine is heavily based on existing machinery in this field. I'm trying to keep it simple for this first design and improve on it as we learn new things</p>
+
+								<p>One of the cool things I remembered from my "How it's made" binge phase was the use of an air knife to partially dry things before they go in to a lengthy convection drying stage. The air knife takes away all the surface droplets mechanically and greatly reduces the conventional drying times. This technique works even on weird uneven surfaces making it ideal for a produce like ginger.</p>
+								<p>Here's a video I found on youtube that shows an Air Knife in operation.</p>
+
+								<span class="image main" style="text-align:center;"><iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/YpXYZ6FYgeA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+								</span>
+								<p>All of this operation will be controlled through an HMI which is the part that I'm most excited about. The VFD motor drives speak ModBus RTU and it's easy to interface to them to control remotely. I'm thinking of making a custom PCB with RS485 interface and couple of opto-isolated digital inputs to interface this machine. Everything will be read with a microcontroller (Preferably STM32 if I can get one) and controlled using a simple UI.</p>
+							<p><span class="image right"><img src="1/HMI.png" alt="" /></span>The user interface will be a web server hosted on a raspberry pi or some other single board linux pc. The advantage of having a web interface is the ability to access it from any device you can think of with a modern web browser. This eliminates a lot of development time writing individual apps for each platform out there.</p>
+							<p> This project is far from an actual manufacturable design. The CAD model was made overnight for a presentation the next day as a proposal to the client. I'll be updating my github repo with the latest development and you can follow along by clicking the link below.</p>
+							<a href="https://github.com/nadeeofthings/wash-plant-design" target="_blank"class="button primary">Ginger wash Plant github repo</a>
+							<hr />
+							
+							
+							</section>
+
+					</div>
+
+				<!-- Copyright -->
+					<div id="copyright">
+						<ul><li>&copy; nadeeofthings</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="../assets/js/jquery.min.js"></script>
+			<script src="../assets/js/jquery.scrollex.min.js"></script>
+			<script src="../assets/js/jquery.scrolly.min.js"></script>
+			<script src="../assets/js/browser.min.js"></script>
+			<script src="../assets/js/breakpoints.min.js"></script>
+			<script src="../assets/js/util.js"></script>
+			<script src="../assets/js/main.js"></script>
+
+	</body>
+</html>

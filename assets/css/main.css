@@ -2600,9 +2600,8 @@ input, select, textarea {
 		.image.fit {
 			display: block;
 			margin: 2.5rem 0;
-			width: 100%;
+			width: 50%;
 		}
-
 			.image.fit:first-child {
 				margin-top: 0;
 			}
@@ -2611,11 +2610,27 @@ input, select, textarea {
 				width: 100%;
 			}
 
+		.image.flow {
+			display: block;
+			margin: 2.5rem 0;
+		}
+			.image.flow:first-child {
+				margin-top: 0;
+			}
+
+			.image.flow img {
+				width: 100%;
+			}
+
+
+		
+
 		.image.main {
 			display: block;
 			margin: 4rem 0;
 			width: 100%;
 		}
+		
 
 			.image.main:first-child {
 				margin-top: 0;
@@ -2628,6 +2643,10 @@ input, select, textarea {
 		@media screen and (max-width: 736px) {
 
 			.image.fit {
+				width:100%;
+				margin: 2rem 0;
+			}
+			.image.flow {
 				margin: 2rem 0;
 			}
 
@@ -3207,7 +3226,7 @@ input, select, textarea {
 			width: 100%;
 			height: 100%;
 			background-color: #212931;
-			background-image: url("../../images/overlay.png"), linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("../../images/bg.jpg");
+			background-image: url("../../images/overlay.png"), linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("../../images/bg5.jpg");
 			background-size: auto,								auto,														100% auto;
 			background-position: center,								center,														top center;
 			background-repeat: repeat,								no-repeat,													no-repeat;
