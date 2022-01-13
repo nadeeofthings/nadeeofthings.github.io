@@ -1,0 +1,106 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Generic Page - Massively by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="../assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="../index.html" class="logo">NADEEOFTHINGS</a>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li><a href="../index.html">Home</a></li>
+							<li class="active"><a href="#">Article</a></li>
+						</ul>
+						<ul class="icons">
+							<li><a href="https://twitter.com/z4nadeesh" target="_blank" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a href="https://www.linkedin.com/in/nadeesha-sam/" target="_blank" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
+							<li><a href="mailto:nadeesh@gmx.com" target="_blank" class="icon fa-envelope-square"><span class="label">Email</span></a></li>
+							<li><a href="https://github.com/nadeeofthings" target="_blank" class="icon fa-github"><span class="label">GitHub</span></a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<section class="post">
+								<header class="major">
+									<span class="date">November 10, 2021</span>
+									<h1>Single channel<br />
+										bench power supply</h1>
+									<p>This is more 3D printing than power supply design but it's still fun.</p>
+								</header>
+								<div class="image main"><img src="2/20211110_182938.jpg" alt="" /></div>
+								<p>This is a little weekend project I did to make a much needed bench power supply. The enclosure is 3D printed and all the components are off the shelf. There is a parts list and where to buy them at the end of this article if you want to make your own.</p>
+								<p>The enclosure was modeled in Fusion360 and I had all the parts needed laying around in my collection. DPS3005 used in this design is a well known buck converter that has constant voltage and constant current modes built in. This little guy is very popular in the maker community and there are upgraded firmware on the internet to improve the experience and add feature like bluetooth and wifi.</p>
+								<h3>Specifications</h3>
+											<ul>
+												<li>Voltage output range: 0-32V</li>
+												<li>Current output range: 0-5A</li>
+												<li>Control methods: CC and CV</li>
+												<li>Output voltage resolution: 0.01V</li>
+												<li>Output current resolution: 0.001A </li>                                 
+												<li>Output Voltage accuracy: ± (0.5% + 1 digit)</li>
+												<li>Output Current accuracy: ± (0.5% + 2 digits)</li>
+											</ul>
+							<p>One thing to note here is that this module can't give you more voltage than what you're feeding it. The input voltage needs to be at least 1.1V higher than the maximum voltage you want this module to output. I've used a transformer that can output 42V rectified as my power source so I can get the full voltage out of 32V from this module.</p>
+								
+							<!-- Image -->
+							<h2>Exploded view</h2>
+							<span class="image flow" style="text-align:center;"><video width="560" height="315" controls autoplay loop>
+								<source src="2/Exploded view.m4v" type="video/mp4">
+							  Your browser does not support the video tag.
+							  </video></span>
+
+							<p>You can find all the CAD and STL files in my github</p>
+							<a href="https://github.com/nadeeofthings/bench-psu" target="_blank"class="button primary">Bench power supply github repo</a>
+							
+								
+							<hr />
+							<h2>Parts list</h2>
+							<ul>
+								<li>RIDEN DPS3005: <a href="https://banggood.onelink.me/zMT7/ff178e33" target="_blank">Banggood.com</a></li>
+								<li>Full bridge rectifier: <a href="https://au.rs-online.com/web/p/bridge-rectifiers/5155559" target="_blank">RS Components</a></li>
+								<li>Filter capacitor: <a href="https://au.rs-online.com/web/p/aluminium-capacitors/1701258" target="_blank">RS Components</a></li>
+								<li>Transformer: <a href="https://au.rs-online.com/web/p/chassis-mounting-transformers/0504587" target="_blank">RS Components</a></li>
+							</ul>
+							
+							</section>
+
+					</div>
+
+				<!-- Copyright -->
+					<div id="copyright">
+						<ul><li>&copy; nadeeofthings</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="../assets/js/jquery.min.js"></script>
+			<script src="../assets/js/jquery.scrollex.min.js"></script>
+			<script src="../assets/js/jquery.scrolly.min.js"></script>
+			<script src="../assets/js/browser.min.js"></script>
+			<script src="../assets/js/breakpoints.min.js"></script>
+			<script src="../assets/js/util.js"></script>
+			<script src="../assets/js/main.js"></script>
+
+	</body>
+</html>
