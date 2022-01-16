@@ -1,0 +1,101 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>H-Bridge motor driver</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="../assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="../index.html" class="logo">NADEEOFTHINGS</a>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li><a href="../index.html">Home</a></li>
+							<li class="active"><a href="#">Article</a></li>
+						</ul>
+						<ul class="icons">
+							<li><a href="https://twitter.com/z4nadeesh" target="_blank" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a href="https://www.linkedin.com/in/nadeesha-sam/" target="_blank" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
+							<li><a href="mailto:nadeesh@gmx.com" target="_blank" class="icon fa-envelope-square"><span class="label">Email</span></a></li>
+							<li><a href="https://github.com/nadeeofthings" target="_blank" class="icon fa-github"><span class="label">GitHub</span></a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<section class="post">
+								<header class="major">
+									<span class="date">April 29, 2021</span>
+									<h1>H-Bridge motor driver</h1>
+									<p>Want to drive large inductive loads? You've come to the right place.</p>
+								</header>
+								<div class="image main"><img src="5/Render.png" alt="" /></div>
+								<p>This design was done as an experiment to convert large DC motors to a servo motor using an analog feedback. It can be programmed to do pretty much anything depending the requirement.</p>
+								<p>In the current configuration, the outputs can handle 100A sustained. Additional flyback diodes and LC filters are used to protect power electronic from inductive kickback.</p>
+								<h3>Specifications</h3>
+											<ul>
+												<li>Number of channels: 2</li>
+												<li>Voltage input max: 48V</li>
+												<li>Current output max: 100A</li>
+												<li>Output filter: LC</li>
+												<li>Analog inputs: 2</li>
+												<li>Digital inputs (isolated): 2</li>                                 
+												<li>Digital outputs: 2 </li>
+												<li>Control method: PID</li>
+											</ul>
+							<p>This PCB was designed using <a href="https://easyeda.com/">EasyEDA</a> for couple of reasons. You can get all the PCBs assembles in china for a very reasonable price through its parent company <a href="https://jlcpcb.com/">JLCPCB</a> no matter what your quantity is. It's a great way to get professionally assembled PCBs for a one off job like this without going trough the hassle of sourcing parts and hand soldering them.</p>
+								
+							<!-- Image -->
+							<h2>Schematic</h2>
+							<div class="image main"><img src="5/0001.jpg" alt="" /></div>
+
+							<p>Power section of this circuit is a straight copy of the application circuit given in the datasheet for the <a href="https://www.infineon.com/dgdl/Infineon-IR2104-DS-v01_00-EN.pdf?fileId=5546d462533600a4015355c7c1c31671">IR2104</a> mosfet gate driver. All four fets in the circuit are N-type and the two high sides switches are driven using a technique called bootstrapping using the aforementioned IR2104 gate driver.</p>
+							<h2>Assembled PCB</h2>
+							<div class="image main"><img src="5/100320_2.jpg" alt="" /></div>
+							<h2>Testing</h2>
+							<p>Here's little clip of testing the board with a real world application. The 24V DC motor was connected to the output channel 1 of the H-Bridge and the output shaft of the motor was attached to a 10 turn potentiometer to act as an analog feedback. This gives us the ability to control the shaft position of the motor in a closed loop control loop. A PID was used as the control algorithm and the video shows you the working system with minimal PID tuning.</p>
+							<span class="image flow" style="text-align:center;"><video width="100%" height="auto" controls loop>
+								<source src="5/20210429_16242.mp4" type="video/mp4">
+							  Your browser does not support the video tag.
+							  </video></span>			
+							<p>You can find all the design files including the BOM and gerber files for manufacturing in my github</p>
+							<a href="https://github.com/nadeeofthings/2ch-hbridge-pcb" target="_blank"class="button primary">H-Bridge PCB github repo</a>
+							</section>
+
+					</div>
+
+				<!-- Copyright -->
+					<div id="copyright">
+						<ul><li>&copy; nadeeofthings</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="../assets/js/jquery.min.js"></script>
+			<script src="../assets/js/jquery.scrollex.min.js"></script>
+			<script src="../assets/js/jquery.scrolly.min.js"></script>
+			<script src="../assets/js/browser.min.js"></script>
+			<script src="../assets/js/breakpoints.min.js"></script>
+			<script src="../assets/js/util.js"></script>
+			<script src="../assets/js/main.js"></script>
+
+	</body>
+</html>
